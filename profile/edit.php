@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
 	// UPDATE PROFILE
-	$query = $pdo->prepare("UPDATE profiles SET first_name=:first_name, last_name=:last_name, email=:email, headline=:headline, summary=:summary WHERE profile_id=:profile_id");
+	$query = $pdo->prepare("UPDATE Profiles SET first_name=:first_name, last_name=:last_name, email=:email, headline=:headline, summary=:summary WHERE profile_id=:profile_id");
 	$query->execute(array(
 		':profile_id' => $_POST['profile_id'],
 		':first_name' => $_POST['first_name'],
@@ -103,7 +103,7 @@ $educations = load_educations($pdo, $_REQUEST['profile_id']);
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Edit a profile</title>
+	<title>Vy Ngo Chi - dc8d48be</title>
 	<?php require 'partials/headers.php'; ?>
 	<script type="text/javascript">var countPos=<?=count($positions)?>;</script>
 	<script type="text/javascript">var countEdu=<?=count($educations)?>;</script>

@@ -27,7 +27,7 @@ $educations = load_educations($pdo, $_REQUEST['profile_id']);
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Show a Profile - <?= htmlentities($profile['first_name']).' '.htmlentities($profile['last_name']) ?></title>
+	<title>Vy Ngo Chi - dc8d48be - <?= htmlentities($profile['first_name']).' '.htmlentities($profile['last_name']) ?></title>
 	<?php require 'partials/headers.php'; ?>
 </head>
 <body>

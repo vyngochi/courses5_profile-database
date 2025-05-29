@@ -27,7 +27,7 @@ if ($profile === false) {
 // POST CONTROLLER
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	if (strlen($_POST['profile_id']>0) && isset($_POST['delete'])) {
-		$query = $pdo->prepare("DELETE FROM profiles WHERE profile_id=:profile_id");
+		$query = $pdo->prepare("DELETE FROM Profiles WHERE profile_id=:profile_id");
 		$query->execute(array(':profile_id' => $_POST['profile_id']));
 		$_SESSION['success'] = "Profile deleted";
 		header('Location: index.php');
@@ -45,7 +45,7 @@ $educations = load_educations($pdo, $_REQUEST['profile_id']);
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Delete a profile</title>
+	<title>Vy Ngo Chi - dc8d48be</title>
 	<?php require 'partials/headers.php'; ?>
 </head>
 <body>

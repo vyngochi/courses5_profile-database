@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
 	// INSERT PROFILE
-	$query = $pdo->prepare("INSERT INTO profiles (user_id, first_name, last_name, email, headline, summary) VALUES (:user_id, :first_name, :last_name, :email, :headline, :summary)");
+	$query = $pdo->prepare("INSERT INTO Profiles (user_id, first_name, last_name, email, headline, summary) VALUES (:user_id, :first_name, :last_name, :email, :headline, :summary)");
 	$query->execute(array(
 		':user_id' => $_SESSION['user_id'],
 		':first_name' => $_POST['first_name'],
@@ -73,7 +73,7 @@ $_SESSION['countPos'] = 0;
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Add a profile</title>
+	<title>Vy Ngo Chi - dc8d48be</title>
 	<?php require 'partials/headers.php'; ?>
 </head>
 <body>
